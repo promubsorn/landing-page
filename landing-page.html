@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Landing Page</title>
+    <style>
+      :root{
+        --color1: #771011;
+        --color2: #6f635b;
+        --color3: #ece6d3;
+      }
+      *{
+        font-family: 'Hind', sans-serif;
+        box-sizing: border-box;
+      }
+      header{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        position: fixed;
+        background-color: var(--color3);
+        top: 0;
+        left: 0;
+        height: 5rem;
+        width: 100vw;
+        z-index: 1;
+      }
+      header>img{
+        width: 30%;
+        height: auto;
+
+      }
+      #nav-bar a{
+        text-decoration: none;
+        color: var(--color2);
+        margin: 2rem;
+        font-size: 1.25rem;
+      }
+      #nav-bar a:hover{
+        background-color: var(--color1);
+        color: #fff;
+        padding: 0.5rem;
+        border-radius: 20px;
+        font-weight: bolder;
+      }
+      #nav-bar a:active{
+        background-color: var(--color2);
+      }
+
+      main{
+        margin-top: 6rem;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        position: absolute;
+      }
+     
+      
+      iframe{
+        width: 200px;
+      }
+      
+      #landing{
+        color: var(--color1);
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 5rem;
+
+      }
+      #form{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+      }
+      #landing img{
+        width: 48%;
+        border-radius: 20px;
+      }
+      #landing form{
+        width: 48%;
+        
+      }
+      #landing p{
+        font-size: 3rem;
+        font-weight: bolder;
+      }
+      #email{
+        width: 80%;
+        height: 3rem;
+        padding: 1rem;
+        border-radius: 20px;
+        border: none;
+        background-color: var(--color3);
+      }
+      #submit{
+        width: 40%;
+        border-radius: 20px;
+        border: none;
+        height: 3rem;
+        font-weight: bolder;
+        margin-top: 1rem;
+        color: #fff;
+        background-color: var(--color1);
+      }
+      #submit:hover{
+        background-color: var(--color3);
+        color: var(--color1);
+        font-weight: bolder;
+        text-decoration: underline;
+      }
+      input::placeholder{
+        color: var(--color2);
+      }
+
+      #Features h1{
+        color: var(--color1);
+      }
+      i{
+        color: var(--color1);
+      }
+
+      #Features, #card-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 5rem;
+        
+      }
+      #Features div, .card{
+        width: 25%;
+        height: auto;
+        text-align: center;
+        background-color: var(--color3);
+        padding: 2rem;
+        border-radius: 20px;
+        
+      }
+      iframe{
+        width: 50%;
+        height: 400px;
+      }
+
+      #How_It_Works{
+        width: 100%;
+        background-image: linear-gradient(rgba(255,255,255,0.5), rgba(255,255,255,0.5)), url("https://trombonethailand.com/wp-content/uploads/2021/06/ประเภทสไลด์ทรอมโบน-1-1024x538.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed; 
+        left: 0;
+        height: 40em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      
+
+      #Pricing{
+        text-align: center;
+        margin-top: 5rem;
+      }
+      .text{
+        font-size: 3rem;
+        margin-bottom: 0;
+        color: var(--color1);
+        font-weight: bolder;
+      
+      }
+
+      .card a{
+        text-decoration: none;
+        background-color: var(--color1);
+        padding: 0.7rem 2rem;
+        border-radius: 20px;
+        color: var(--color3);
+      }
+      .card a:hover{
+        text-decoration: none;
+        background-color: var(--color2);
+        color: var(--color1);
+        font-weight: bolder;
+        padding: 0.7rem 2rem;
+        border-radius: 20px;
+      }
+
+      @media only screen and (max-width: 992px){
+        #nav-bar a {
+          font-size: 1rem;
+          margin: 1rem;
+        }
+        #landing{
+          flex-direction: column;
+          justify-content: center;
+        }
+        #landing img{
+          margin-top: 50px;
+          width: 100%;
+          border-radius: 20px;
+        }
+        #landing form{
+          width: 100%;
+        }
+        #Features, #card-container{
+          flex-direction: column;
+        }
+        #Features div, .card{
+          width: 100%;
+          margin: 2rem auto;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header id="header">
+      <img id="header-img" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/product-landing-page-logo.png" />
+      <nav id="nav-bar">
+        <a href="#Features" class="nav-link">Features</a>
+        <a href="#How_It_Works" class="nav-link">How It Works</a>
+        <a href="#Pricing" class="nav-link">Pricing</a>
+      </nav>
+    </header>
+    <main>
+        <div id="landing">
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <p>Handcrafted, home-made masterpieces</p>
+                <input id="email" type="email" name="email" placeholder="Enter your email address" >
+                <input type="submit" id="submit" value="GET STARTED">
+            </form>
+            <img src="https://images.unsplash.com/photo-1547927168-17021e7ef8c3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="Trombone in its case" title="Trombone in its case" >
+        </div>
+        
+        <div id="Features">
+            <div>
+                <i class="fa fa-cog fa-spin fa-4x"></i>
+                <h1>Premium<br>Materials</h1>
+                <p>Our trombones use the shiniest brass which is sourced locally. This will increase the longevity of your purchase.</p>
+            </div>
+            <div>
+                <i class="fa fa-car fa-3x"></i>
+                <h1>Fast<br>Shipping</h1>
+                <p>We make sure you recieve your trombone as soon as we have finished making it. We also provide free returns if you are not satisfied.</p>
+            </div>
+            <div>
+                <i class="fa fa-heart fa-3x"></i>
+                <h1>Quality<br>Assurance</h1>
+                <p>For every purchase you make, we will ensure there are no damages or faults and we will check and test the pitch of your instrument.</p>
+            </div>
+        </div>
+        <div id="How_It_Works">
+            
+            <iframe src="https://www.youtube.com/embed/y8Yv4pnO7qc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            
+        </div>
+        <div id="Pricing">
+            <p class="text">Pricing</p>
+            <div id="card-container">
+              <div class="card">
+                  <h2 style="color: var(--color1);">TENOR TROMBONE</h3>
+                  <h3>$600</h3>
+                  <a href="#">SELECT</a>
+              </div>
+              <div class="card">
+                  <h2 style="color: var(--color1);">BASS TROMBONE</h2>
+                  <h3>$900</h3>
+                  <a href="#">SELECT</a>
+              </div>
+              <div class="card">
+                  <h2 style="color: var(--color1);">VALVE TROMBONE</h2>
+                  <h3>$1200</h3>
+                  <a href="#">SELECT</a>
+              </div>
+            </div>
+        </div>
+
+    </main>
+  </body>
+
+</html>
